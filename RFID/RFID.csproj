@@ -32,8 +32,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Opc.UaFx.Advanced, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0220af0d33d50236, processorArchitecture=MSIL">
+      <HintPath>..\packages\Opc.UaFx.Advanced.2.2.1\lib\net46\Opc.UaFx.Advanced.dll</HintPath>
+    </Reference>
+    <Reference Include="RCRD_8888">
+      <HintPath>..\..\RFID_IP\RCRD_8888\RCRD_8888\RCRD_8888.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Primitives, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Primitives.4.4.0\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +57,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RFIDConversion.cs" />
+    <Compile Include="RFID_Reader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Opc.UaFx.Advanced\Opc.UaFx.Advanced.chm" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Opc.UaFx.Advanced\OpcWatch.exe" />
+    <Content Include="Opc.UaFx.Advanced\Version.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
