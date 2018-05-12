@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using ReaderB;
 
 namespace RFID
 {
-    class RFID_Reader : IDisposable
+    internal class RFID_Reader : IDisposable
     {
 
         /// <summary>
         /// RFID Reader IP Address
         /// </summary>
         public IPAddress IP_Address { get; set; }
+
         /// <summary>
         /// Port of the RFID Reader
         /// </summary>
@@ -23,6 +20,7 @@ namespace RFID
         public int ErrorCode;
 
         public byte ComAddrr = 0xff;
+
         /// <summary>
         /// Information on current Port Status
         /// </summary>
@@ -48,7 +46,6 @@ namespace RFID
 
         public bool CloseConnection()
         {
-
             bool success = true;
             try
             {
@@ -60,7 +57,6 @@ namespace RFID
             }
 
             return success;
-            
         }
     }
 }
